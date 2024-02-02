@@ -1,0 +1,30 @@
+[
+    {
+        "id": "65aac69bdad82",
+        "user_id": "demo",
+        "text": "\ud83d\ude80 *Introducing _EasyPost\u2122 *: The simple way to create and share content! \ud83d\udcf8\ud83d\udcdd\r\n\r\nCreate stunning posts effortlessly with *EasyPost\u2122*. Upload images, format _text_, and embed YouTube videos with WhatsApp&#039;s simplicity. \ud83c\udfa8\r\n\r\n\ud83c\udff7\ufe0f *Tag for Visibility*:\r\nBoost post visibility with tags. Add relevant tags for easy discovery and engagement. ~#hashtag~\ud83c\udff7\ufe0f\ud83d\udd0d\r\n\r\n\ud83d\udcf1 *Fully Responsive*:\r\n*EasyPost\u2122* is fully responsive. Create, edit, and interact on any device, anywhere. \ud83d\udcf1\ud83d\udcbb\r\n\r\n\ud83d\udcbb *Crafted with Love*:\r\nBuilt with love in *JavaScript*, *CSS*, *HTML*, and *PHP*. Experience a reliable platform for a secure creative journey. \ud83d\udc96\ud83d\ude80",
+        "tags": [
+            "easypost",
+            "frankastore",
+            "demo",
+            "app",
+            "javascript",
+            "html",
+            "php"
+        ],
+        "image": "..\/img\/source.unsplash.jpg",
+        "videoLink": "",
+        "date": "19\/01\/2024, 15:59"
+    },
+    {
+        "id": "65aaf1fc640b0",
+        "user_id": "rayos",
+        "text": "d",
+        "tags": [
+            ""
+        ],
+        "image": "..\/img\/7c5ada3613657fc.gif",
+        "videoLink": "",
+        "date": "19\/01\/2024, 19:04"
+    }
+]

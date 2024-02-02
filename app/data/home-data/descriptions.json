@@ -1,0 +1,39 @@
+[
+    {
+      "category": "<i class='bi-wordpress'></i> WordPress",
+      "color": "primary-emphasis",
+      "title": "Fix WordPress Site Issues",
+      "description": "Efficiently address and fix common WordPress issues, including theme conflicts, plugin glitches, and performance optimization.",
+      "thumbnail": "../img/img-home/working.png"
+    },
+    {
+      "category": "<i class='bi bi-shopify'></i> Shopify",
+      "color": "success-emphasis",
+      "title": "Fix Shopify Store Challenges",
+      "date": "Nov 11",
+      "description": "Swiftly fix challenges in your Shopify store, focusing on theme adjustments, seamless product setup, and efficient order processing.",
+      "thumbnail": "../img/img-home/1.jpg"
+    },
+  
+      {
+        "category": "<i class='bi bi-woo'></i>  WooCommerce",
+        "color": "primary-emphasis",
+        "title": "Fix WooCommerce Site Challenges",
+        "date": "Nov 12",
+        "description": "Specialized troubleshooting to fix common issues in WooCommerce. Resolve order processing challenges, address theme conflicts, and ensure seamless integration with third-party plugins.",
+        "thumbnail": "../img/img-home/woocomerce.png"
+      },
+     {
+  "category": "<i class='bi bi-google-logo'></i> SEO",
+  "color": "warning-emphasis",
+  "title": "Optimize SEO for Better Rankings",
+  "date": "Nov 15",
+  "description": "Dedicated SEO fixes to boost your website's rankings. Address on-page SEO elements, optimize content structure, and implement strategies for improved search engine visibility and organic traffic.",
+  "thumbnail": "../img/img-home/seo-optimization.avif"
+}
+
+    ]
+    
+
+  
+  

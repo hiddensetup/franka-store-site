@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect to www version
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+  # Hide PHP extension
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^([^/]+)/?$ $1.php [L]
+
+  # Enable compression for JavaScript files
+  <FilesMatch "\.js$">
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>

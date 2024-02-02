@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Conversation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">WhatsApp Conversation</div>
+                    <div class="card-body" id="message-container">
+                        <!-- Messages will be added dynamically here -->
+                    </div>
+                    <div class="card-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type a message..." id="message-input">
+                            <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#setupModal">Setup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Setup Modal -->
+    <div class="modal fade" id="setupModal" tabindex="-1" aria-labelledby="setupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="setupModalLabel">Setup Connection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="apiBaseUrl" class="form-label">API Base URL:</label>
+                        <input type="text" class="form-control" id="apiBaseUrl" placeholder="Enter API Base URL">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userId" class="form-label">User ID:</label>
+                        <input type="text" class="form-control" id="userId" placeholder="Enter User ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="authToken" class="form-label">Authentication Token:</label>
+                        <input type="text" class="form-control" id="authToken" placeholder="Enter Authentication Token">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary" onclick="getQRCode()">Get QR Code</button>
+                    </div>
+                    <div id="qrCodeContainer" class="mb-3"></div>
+                    <div id="connectionStatus" class="mb-3"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="testConnection()">Test Connection</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let apiBaseUrl = "";
+        let userId = "";
+        let authToken = "";
+
+        function setupConnection() {
+            document.getElementById('apiBaseUrl').value = apiBaseUrl;
+            document.getElementById('userId').value = userId;
+            document.getElementById('authToken').value = authToken;
+            document.getElementById('connectionStatus').innerHTML = "";
+            document.getElementById('qrCodeContainer').innerHTML = "";
+            $('#setupModal').modal('show');
+        }
+
+        function saveConnection() {
+            apiBaseUrl = document.getElementById('apiBaseUrl').value.trim();
+            userId = document.getElementById('userId').value.trim();
+            authToken = document.getElementById('authToken').value.trim();
+
+            // Perform setup actions (e.g., authentication) with the API
+            document.getElementById('connectionStatus').innerHTML = "Connection established!";
+        }
+
+        function getQRCode() {
+            const apiQRCodeEndpoint = `${apiBaseUrl}/api/user/qrcode?auth=${authToken}`;
+
+            // Clear existing content
+            document.getElementById('qrCodeContainer').innerHTML = "";
+
+            // Simulate getting QR code from the API
+            console.log("Getting QR Code from API...");
+
+            // Simulate displaying the QR code (you may replace this with actual logic)
+            const qrContainer = document.getElementById('qrCodeContainer');
+            const qr = new QRious({
+                element: qrContainer,
+                value: apiQRCodeEndpoint,
+                size: 300,
+            });
+        }
+
+        function testConnection() {
+            const apiLoginEndpoint = `${apiBaseUrl}/api/user/login?auth=${authToken}`;
+            const apiSendMessageEndpoint = `${apiBaseUrl}/api/message/send?auth=${authToken}`;
+            const apiLastMessageEndpoint = `${apiBaseUrl}/api/message/last?auth=${authToken}`;
+
+            // Perform testing actions (e.g., API requests) to check the connection
+            console.log("Testing API connection...");
+
+            // Simulate testing login endpoint
+            console.log("Testing Login Endpoint:", apiLoginEndpoint);
+
+            // Simulate testing send message endpoint
+            console.log("Testing Send Message Endpoint:", apiSendMessageEndpoint);
+
+            // Simulate testing last message endpoint
+            console.log("Testing Last Message Endpoint:", apiLastMessageEndpoint);
+
+            // Update the connection status in the modal
+            document.getElementById('connectionStatus').innerHTML = "Connection tested successfully!";
+        }
+
+        function createMessageElement(message, type) {
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("alert", "mt-2", type === "sent" ? "alert-primary" : "alert-success");
+            messageElement.setAttribute("role", "alert");
+            messageElement.innerHTML = message;
+            return messageElement;
+        }
+
+        function sendMessage() {
+            var messageInput = document.getElementById("message-input");
+            var messageContainer = document.getElementById("message-container");
+
+            var messageText = messageInput.value.trim();
+
+            if (messageText !== "") {
+                // Simulate sending message to the API
+                simulateAPISend(messageText);
+
+                messageContainer.appendChild(createMessageElement(messageText, "sent"));
+                messageInput.value = "";
+
+                setTimeout(receiveMessage, 1000);
+            }
+        }
+
+        function receiveMessage() {
+            var messageContainer = document.getElementById("message-container");
+            // Simulate receiving a message from the API
+            simulateAPIReceive("This is a reply.");
+
+            messageContainer.appendChild(createMessageElement("This is a reply.", "received"));
+        }
+
+        function simulateAPISend(message) {
+            // Simulate sending message to the API
+            console.log("Sending message to API:", message);
+        }
+
+        function simulateAPIReceive(message) {
+            // Simulate receiving a message from the API
+            console.log("Receiving message from API:", message);
+        }
+
+        // Enable sending messages by pressing Enter key
+        document.getElementById('message-input').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+
+</html>

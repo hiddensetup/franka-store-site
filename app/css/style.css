@@ -1,0 +1,161 @@
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 1s ease-out;
+}
+
+del {
+  opacity: .7;
+}
+
+em {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.rounded-4 {
+  border-radius: .7rem !important;
+}
+
+.rounded-end-4 {
+  border-top-right-radius: .7rem !important;
+  border-bottom-right-radius: .7rem !important;
+
+
+}
+
+.rounded-5 {
+  border-radius: 1.5rem !important;
+}
+
+.max-width-700 {
+  max-width: 800px;
+}
+
+.btn-bg:active {
+  background-color: #3939391c !important;
+}
+
+.rounded-shadow {
+  border-radius: 8px !important;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+
+/* 
+.primary,
+.btn-primary,
+.bg-primary {
+  background-color: blueviolet;
+  border-color: blueviolet;
+
+  &:hover,
+  &:active {
+    background-color: rgb(87, 26, 144) !important;
+    border-color: rgb(75, 23, 125) !important;
+    transition: 0.5s all !important;
+  }
+
+} */
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease-in-out forwards;
+  transition: all 0.5s ease-out;
+}
+
+
+
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slideUp {
+  opacity: 0;
+  transform: translateY(0px);
+  animation: slideUpAnimation 1s ease-in-out forwards;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.slide {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpAnimation 1s ease-in-out forwards;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+.form-control:focus {
+  border-color: transparent !important;
+}
+
+
+.alert-primary {
+  background-color: rgb(0, 0, 0) !important;
+  border-color: rgb(248, 248, 255) !important;
+  color: rgb(254, 254, 254) !important;
+
+  &:hover,
+  &:active {
+    background-color: rgb(141, 133, 148) !important;
+    border-color: rgb(141, 133, 148) !important;
+    color: rgb(254, 254, 254) !important;
+    cursor: cell;
+  }
+}
+
+
+
+.btn-custom-secondary:active {
+  background-color: #585c7030 !important;
+  box-shadow: inset 0px 0px 3px 2px #13151566;
+}
+
+.rotate-gear {
+  transition: transform 0.3s ease-in-out !important;
+  ;
+}
+
+.rotate-gear:active {
+  transform: rotate(360deg) !important;
+}
+
+.modal-backdrop {
+  background-color: rgb(255, 255, 255) !important;
+}

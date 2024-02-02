@@ -1,0 +1,61 @@
+{
+    "content": {
+        "pageTitle": "Frankastore - Web and Ecommerce Solutions",
+        "metaKeywords": "Frankastore, web solutions, ecommerce solutions, web development",
+        "metaDescription": "Premium web and ecommerce solutions for your website by Frankastore.",
+        "favicon": "../img/apple-touch-icon.png"
+    },
+    "hero-section": {
+        "heroTitle": "Conquering Web and Ecommerce Obstacles",
+        "heroDescription": [
+            "Let Frankastore handle your common web and ecommerce obstacles while you focus on growing your business.",
+            "<br>"
+        ]
+    },
+    "form": {
+        "formTitle": "Need Web or Ecommerce Help?",
+        "nameLabel": "Your Name",
+        "emailLabel": "Your Email",
+        "submitButton": "Get Help",
+        "messageOptions": [
+            "Info about services",
+            "Purchase inquiry",
+            "Partnership interest"
+        ]
+    },
+    "benefits": {
+        "benefit1Title": "Smooth Issue Resolution",
+        "benefit1Description": "Resolve common web and ecommerce website issues smoothly with our expert team.",
+        "benefit2Title": "Speedy and Trustworthy Solutions",
+        "benefit2Description": "Get speedy and trustworthy solutions for your common web and ecommerce obstacles.",
+        "supportTitle": "24/7 Web and Ecommerce Support",
+        "supportDescription": "Round-the-clock support to ensure your web and ecommerce site runs smoothly."
+    },
+    "testimonial": {
+        "testimonialTitle": "Client Testimonials"
+    },
+    "cta": {
+        "ctaTitle": "Ready to Boost Your Web and Ecommerce Experience?",
+        "ctaDescription": "Contact Frankastore now for expert web and ecommerce solutions and elevate your online presence.",
+        "ctaButton": "Book a meeting"
+    },
+    "footer": {
+        "services01Title": "Web and Ecommerce Services",
+        "item01Service01": "Malware Removal",
+        "item02Service01": "Web and Ecommerce Modification",
+        "item03Service01": "Page Creation and API Integration",
+        "services02Title": "Additional Services",
+        "item01Service02": "Quick Fixes",
+        "item02Service02": "Custom Development",
+        "item03Service02": "Partner Programs",
+        "contactTitle": "Contact Information",
+        "phoneNumber": "",
+        "address": "",
+        "TelegramMessage": "<i class='bi bi-telegram text-info'></i> <a class='' href='https://t.me/frankastore_bot' target='_blank'> Telegram @frankastore_bot</a>",
+        "contactEmail": "info@franka.store",
+        "copyright": "©2024 Frankastore - All rights reserved",
+        "privacyLink": "Privacy Policy",
+        "termsLink": "Terms and Conditions",
+        "salesRefundsLink": "Sales and Refunds"
+    }
+}
