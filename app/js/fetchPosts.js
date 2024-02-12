@@ -2,7 +2,7 @@
 async function fetchPosts(userId) {
 
     try {
-        const response = await fetch('../data/easypost-data/posts.json');
+        const response = await fetch('../data/postore-data/posts.json');
         const posts = await response.json();
 
         // Filter posts based on the logged-in user ID

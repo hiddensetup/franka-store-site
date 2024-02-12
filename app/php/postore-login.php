@@ -2,7 +2,7 @@
 session_start();
 
 // Include the users file
-include 'easypost-users.php';
+include 'postore-users.php';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Password is correct, set session variables and redirect to app.php
                     $_SESSION['user_id'] = $userData['name'];
                     $_SESSION['user_name'] = $userData['name'];
-                    header('Location: easypost.php');
+                    header('Location: postore.php');
                     exit();
                 } else {
                     $userFound = true; // Password is incorrect
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="card rounded-4 shadow">
                     <div class="card-body mb-3">
                         <h5 class="h1 mt-5 text-center"> <i class="bi bi-door-open"></i> Hello!</h5>
-                        <p class="text-center lead mb-5">Sign in to your easypost account</p>
+                        <p class="text-center lead mb-5">Sign in to your Postore account</p>
                         <?php if (isset($error)) : ?>
                             <div class="alert alert-danger rounded-4 slide" role="alert">
                                 <?= htmlspecialchars($error); ?>
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
 
                             <div class="text-center mt-2">
-                                <a href="easypost-register.php" class="btn btn-secondary rounded-4 w-100">Register for free access</a>
+                                <a href="postore-register.php" class="btn btn-secondary rounded-4 w-100">Register for free access</a>
                             </div>
                         </form>
                     </div>
@@ -104,52 +104,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
+    <!-- <script>
+        function nextStep(currentStep, nextStep) {
+            document.getElementById(currentStep).style.display = 'none';
+            document.getElementById(nextStep).style.display = 'block';
+        }
+    </script> -->
+
+
     <script>
-       function nextStep(currentStep, nextStep) {
-    if (currentStep === 'step1') {
-        // Validate username or email
-        var usernameInput = document.getElementsByName('username')[0].value;
-        var emailPattern = /^[a-zA-Z0-9._-]+@(gmail\.com|outlook\.com|icloud\.com|me\.com|yahoo\.com|hotmail\.com)$/;
-        var usernamePattern = /^[a-zA-Z0-9]+$/;
+        function nextStep(currentStep, nextStep) {
+            if (currentStep === 'step1') {
+                // Check if the input is a valid email or username
+                var usernameInput = document.getElementsByName('username')[0].value;
+                var emailPattern = /^[a-zA-Z0-9._-]+@(gmail\.com|outlook\.com|icloud\.com|me\.com|yahoo\.com|hotmail\.com)$/;
 
-        if (!emailPattern.test(usernameInput) && !usernamePattern.test(usernameInput)) {
-            showError('Please enter a valid email address or username with allowed characters.');
-            return;
+                // Validate username (contains only letters and numbers)
+                var usernamePattern = /^[a-zA-Z0-9]+$/;
+
+                if (!emailPattern.test(usernameInput) && !usernamePattern.test(usernameInput)) {
+                    // Show Bootstrap alert
+                    var alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-danger rounded-4 slide';
+                    alertDiv.innerHTML = '<strong>Error:</strong> Please enter a valid email address or username with allowed characters.';
+
+                    // Remove any existing alerts
+                    var existingAlerts = document.querySelectorAll('.alert');
+                    existingAlerts.forEach(function(alert) {
+                        alert.remove();
+                    });
+
+                    document.getElementById('loginForm').prepend(alertDiv);
+                    return;
+                }
+            }
+
+            // Remove any existing alerts
+            var existingAlerts = document.querySelectorAll('.alert');
+            existingAlerts.forEach(function(alert) {
+                alert.remove();
+            });
+
+            document.getElementById(currentStep).style.display = 'none';
+            document.getElementById(nextStep).style.display = 'block';
         }
-    } else if (currentStep === 'step2') {
-        // Validate password
-        var passwordInput = document.getElementsByName('password')[0].value;
-        if (!passwordInput || passwordInput.length < 8) {
-            showError('Please enter a valid password with at least 8 characters.');
-            return;
-        }
-    }
-
-    // Remove any existing alerts
-    var existingAlerts = document.querySelectorAll('.alert');
-    existingAlerts.forEach(function (alert) {
-        alert.remove();
-    });
-
-    document.getElementById(currentStep).style.display = 'none';
-    document.getElementById(nextStep).style.display = 'block';
-}
-
-function showError(message) {
-    // Show Bootstrap alert for errors
-    var alertDiv = document.createElement('div');
-    alertDiv.className = 'alert alert-danger rounded-4 slide';
-    alertDiv.innerHTML = '<strong>Error:</strong> ' + message;
-
-    // Remove any existing alerts
-    var existingAlerts = document.querySelectorAll('.alert');
-    existingAlerts.forEach(function (alert) {
-        alert.remove();
-    });
-
-    document.getElementById('loginForm').prepend(alertDiv);
-}
-
     </script>
 
 

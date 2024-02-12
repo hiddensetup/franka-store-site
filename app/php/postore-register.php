@@ -2,7 +2,7 @@
 session_start();
 
 // Include the users file
-include 'easypost-users.php';
+include 'postore-users.php';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ];
 
                         // Save the updated allowedUsers array back to the users.php file
-                        file_put_contents('easypost-users.php', '<?php $allowedUsers = ' . var_export($allowedUsers, true) . ';');
+                        file_put_contents('postore-users.php', '<?php $allowedUsers = ' . var_export($allowedUsers, true) . ';');
 
                         // Redirect to login page after successful registration
-                        header('Location: easypost-login.php');
+                        header('Location: postore-login.php');
                         exit();
                     }
                 }
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="card rounded-4 shadow">
                     <div class="card-body mb-3">
                         <h5 class="h1 mt-5 text-center"> <i class="bi bi-person-bounding-box"></i> Sign up</h5>
-                        <p class="text-center lead mb-5">Create an account to start using easypost </p>
+                        <p class="text-center lead mb-5">Create an account to start using Postore </p>
                         <?php if (isset($error)) : ?>
                             <div class="alert alert-danger rounded-4 slide" role="alert">
                                 <?= htmlspecialchars($error); ?>
@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <hr>
 
                             <div class="text-center d-flex flex-column mt-3">
-                                <a href="easypost-login.php" class="mb-3 link">Already have an account?</a>
+                                <a href="postore-login.php" class="mb-3 link">Already have an account?</a>
                                 <small> Frankastore® - 2023</small>
 
 

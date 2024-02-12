@@ -95,7 +95,7 @@ function formatWhatsAppText(text) {
 
 // Function to redirect to the register page
 function redirectToRegister() {
-    window.location.href = 'easypost-register.php';
+    window.location.href = 'postore-register.php';
 }
 
 // Function to show the login modal
@@ -117,7 +117,7 @@ function loginUser() {
     var password = document.getElementById('loginPassword').value;
 
 
-    fetch('easypost-login_process.php', {
+    fetch('postore-login_process.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

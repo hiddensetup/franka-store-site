@@ -1,5 +1,5 @@
 window.onload = function () {
-    fetch('../data/easypost-data/posts.json')
+    fetch('../data/postore-data/posts.json')
         .then(response => response.json())
         .then(posts => {
             posts.forEach(addPostToPage);

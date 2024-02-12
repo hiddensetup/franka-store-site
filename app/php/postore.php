@@ -3,7 +3,7 @@
 session_start();
 
 // Include the users file
-include 'easypost-users.php';
+include 'postore-users.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id']) || !isset($allowedUsers[$_SESSION['user_id']])) {
@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id']) || !isset($allowedUsers[$_SESSION['user_id']]))
 if (isset($_POST['logout'])) {
     // Destroy the session and redirect to the login page
     session_destroy();
-    header('Location: easypost-login.php');
+    header('Location: postore-login.php');
     exit();
 }
 ?>
@@ -34,7 +34,7 @@ if (isset($_POST['logout'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>easypost - Frankastore</title>
+    <title>Postore - Frankastore</title>
 
 </head>
 
@@ -129,9 +129,7 @@ if (isset($_POST['logout'])) {
 
     <!-- Modal for deleting a post confirmation -->
     <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
-    <div class="pt-5"></div>
-
-    <div class="mt-5 modal-dialog">
+        <div class="modal-dialog">
             <div class="rounded-5 modal-content">
                 <div class="modal-header border-bottom-0">
                     <h5 class="modal-title" id="deleteConfirmationModalLabel"><i class="bi bi-info-circle"></i> Delete Confirmation</h5>
@@ -150,8 +148,8 @@ if (isset($_POST['logout'])) {
 
 
     <!-- Bootstrap toast container -->
-    <div id="toast" class="rounded-4 toast mt-5 position-fixed top-10 end-10 zindex-1000 w-auto" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header border-0 rounded-top-4">
+    <div id="toast" class="rounded-4 toast position-fixed top-10 end-10 zindex-1000 w-auto" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header rounded-top-4">
             <strong class="me-auto">Post Status</strong>
         </div>
         <div class="toast-body" id="toast-message"></div>
@@ -162,7 +160,7 @@ if (isset($_POST['logout'])) {
         <div class="modal-dialog">
             <div class="rounded-5 modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Sign in to easypost</h5>
+                    <h5 class="modal-title" id="loginModalLabel">Sign in to Postore</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -180,7 +178,7 @@ if (isset($_POST['logout'])) {
                         </div>
                         <button type="button" class="rounded-4 w-100 btn btn-primary" onclick="loginUser()">Sign in</button>
                         <div class="text-center mt-2">
-                            <a href="easypost-register.php" class="btn btn-secondary rounded-4 w-100">Sign up for free</a>
+                            <a href="postore-register.php" class="btn btn-secondary rounded-4 w-100">Sign up for free</a>
                         </div>
                     </form>
                 </div>

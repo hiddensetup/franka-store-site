@@ -89,7 +89,7 @@ function confirmDelete() {
     const postId = document.getElementById('deleteConfirmationModal').getAttribute('data-post-id');
 
     // Send a request to delete the post on the server
-    fetch('../php/easypost-delete_post.php', {
+    fetch('../php/postore-delete_post.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ async function submitPost() {
     // Add the date to the form data
     formData.append('date', date);
 
-    fetch('../php/easypost-process_post.php', {
+    fetch('../php/postore-process_post.php', {
         method: 'POST',
         body: formData
     })

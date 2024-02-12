@@ -14,4 +14,13 @@
   <FilesMatch "\.js$">
     SetOutputFilter DEFLATE
   </FilesMatch>
+
+  # Enable PUT, GET, and POST
+  <LimitExcept OPTIONS>
+    AllowOverride All
+    <Limit GET POST PUT>
+      Order allow,deny
+      Allow from all
+    </Limit>
+  </LimitExcept>
 </IfModule>

@@ -3,7 +3,7 @@
 session_start();
 
 // Include the users file
-include 'easypost-users.php';
+include 'postore-users.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id']) || !isset($allowedUsers[$_SESSION['user_id']])) {
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $postId = htmlspecialchars($postData['postId']);
 
         // Read existing posts from the JSON file
-        $postsFile = '../data/easypost-data/posts.json';
+        $postsFile = '../data/postore-data/posts.json';
         $existingPosts = file_exists($postsFile) ? json_decode(file_get_contents($postsFile), true) : [];
 
         // Find the post in the array and check if the user is the owner
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Save the updated user data back to the users.php file
             $serializedUsers = '<?php $allowedUsers = ' . var_export($allowedUsers, true) . ';';
-            file_put_contents('easypost-users.php', $serializedUsers);
+            file_put_contents('postore-users.php', $serializedUsers);
 
             // Send a JSON response with success message
             header('Content-Type: application/json');

@@ -131,10 +131,10 @@
                             <a class="nav-link" href="#" onclick="loadIframe('img-converter.php', this);"><span class="p-1 fw-light  text-success">Free</span> Image Converter</a>
                         </li>
                         <li data-bs-toggle="collapse" data-bs-target="#navbarNav" class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadIframe('easypost.php', this);"><span class="p-1 fw-light  text-success"><i class="bi bi-download"></i></span> Easypost</a>
+                            <a class="nav-link" href="#" onclick="loadIframe('postore.php', this);"><span class="p-1 fw-light  text-success"><i class="bi bi-download"></i></span> Easypost</a>
                         </li>
                         <li data-bs-toggle="collapse" data-bs-target="#navbarNav" class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadIframe('easynotes/index.html', this);"><span class="p-1 fw-light  text-success"><i class="bi bi-download"></i></span> Easynotes</a>
+                            <a class="nav-link" href="#" onclick="loadIframe('kanban/index.html', this);"><span class="p-1 fw-light  text-success"><i class="bi bi-download"></i></span> Easynotes</a>
                         </li>
 
                     </ul>

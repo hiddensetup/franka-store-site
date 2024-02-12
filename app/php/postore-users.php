@@ -27,14 +27,4 @@
     'email' => 'peter@gmail.com',
     'password' => '$2y$10$ru6uFr3.4flLwMU3hMZBIe4OdGD0GGarcfWh4LPWn5wOtY7vbvZKK',
   ),
-  'rayos' => 
-  array (
-    'name' => 'rayos',
-    'email' => 'rayos@gmail.com',
-    'password' => '$2y$10$Ug1QTUsJqicrH2C6SnzkxurflJUm4Xro9loJGlxIJNf3X.27qtqB6',
-    'posts' => 
-    array (
-      0 => '65aaf1fc640b0',
-    ),
-  ),
 );

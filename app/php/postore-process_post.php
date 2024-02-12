@@ -3,7 +3,7 @@
 session_start();
 
 // Include the users file
-include 'easypost-users.php';
+include 'postore-users.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id']) || !isset($allowedUsers[$_SESSION['user_id']])) {
@@ -71,7 +71,7 @@ if (!empty($_FILES["postImage"]["name"])) {
     ];
 
     // Ensure the posts.json file exists
-    $postsFile = '../data/easypost-data/posts.json';
+    $postsFile = '../data/postore-data/posts.json';
 
     // Read existing posts from the JSON file
     $existingPosts = file_exists($postsFile) ? json_decode(file_get_contents($postsFile), true) : [];
@@ -84,7 +84,7 @@ if (!empty($_FILES["postImage"]["name"])) {
 
     // Update the user's posts array in users.php with the new post ID
     $allowedUsers[$_SESSION['user_id']]['posts'][] = $newPost['id'];
-    file_put_contents('easypost-users.php', '<?php $allowedUsers = ' . var_export($allowedUsers, true) . ';');
+    file_put_contents('postore-users.php', '<?php $allowedUsers = ' . var_export($allowedUsers, true) . ';');
 
     // Send a JSON response with success message and the new post data
     header('Content-Type: application/json');
