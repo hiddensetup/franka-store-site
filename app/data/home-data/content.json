@@ -1,36 +1,42 @@
 {
     "content": {
-        "pageTitle": "Frankastore - Web and Ecommerce Solutions",
-        "metaKeywords": "Frankastore, web solutions, ecommerce solutions, web development",
+        "pageTitle": "¿La pagina no carga? ¿Página web lenta? | Franka Store Web Fix ",
+        "metaKeywords": "Tu sitio web tiene errores, no se ve bien en dispositivos móviles y no aparece en Google. Obtén ayuda URGENTE!",
         "metaDescription": "Premium web and ecommerce solutions for your website by Frankastore.",
         "favicon": "../img/apple-touch-icon.png"
     },
     "hero-section": {
-        "heroTitle": "Conquering Web and Ecommerce Obstacles",
+        "heroTitle": "¿Problemas con tu sitio web o tienda en línea?",
         "heroDescription": [
-            "Let Frankastore handle your common web and ecommerce obstacles while you focus on growing your business.",
-            "<br>"
+          "Tu sitio web tiene errores, carga lentamente o no aparece en Google?",
+          "¡Obtén ayuda URGENTE para solucionar estos problemas y mejorar tu presencia en línea!"
         ]
-    },
+      },
     "form": {
-        "formTitle": "Need Web or Ecommerce Help?",
-        "nameLabel": "Your Name",
-        "emailLabel": "Your Email",
-        "submitButton": "Get Help",
-        "messageOptions": [
-            "Info about services",
-            "Purchase inquiry",
-            "Partnership interest"
-        ]
+        "formTitle": "Contacto por WhatsApp",
+        "nameLabel": "Tu Nombre",
+        "emailLabel": "Tu Correo Electrónico",
+        "submitButton": "Obtener Ayuda",
+        "messageOptions" :[
+            "Corregir errores y problemas del sitio web",
+            "Optimizar el sitio web para dispositivos móviles",
+            "Mejorar la velocidad de carga del sitio web",
+            "Asegurar la visibilidad del sitio web en los motores de búsqueda",
+            "Proporcionar asistencia urgente para problemas del sitio web",
+            "Ofrecer mantenimiento y actualizaciones del sitio web",
+            "Ayudar con la configuración y gestión de copias de seguridad del sitio web",
+            "Ofrecer soporte personalizado para consultas relacionadas con el sitio web"
+          ]
+          
     },
     "benefits": {
-        "benefit1Title": "Smooth Issue Resolution",
-        "benefit1Description": "Resolve common web and ecommerce website issues smoothly with our expert team.",
-        "benefit2Title": "Speedy and Trustworthy Solutions",
-        "benefit2Description": "Get speedy and trustworthy solutions for your common web and ecommerce obstacles.",
-        "supportTitle": "24/7 Web and Ecommerce Support",
-        "supportDescription": "Round-the-clock support to ensure your web and ecommerce site runs smoothly."
-    },
+        "benefit1Title": "Resolución Eficiente",
+        "benefit1Description": "Soluciona rápidamente errores en la web y responsive en dispositivos móviles.",
+        "benefit2Title": "Soluciones Confiables",
+        "benefit2Description": "Obtén correcciones confiables para obstáculos comunes en la web y en dispositivos móviles.",
+        "supportTitle": "Soporte Web 24/7",
+        "supportDescription": "Asistencia constante para mantener tu sitio funcionando sin problemas."
+      },          
     "testimonial": {
         "testimonialTitle": "Client Testimonials"
     },
