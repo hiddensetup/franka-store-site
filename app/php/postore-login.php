@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="card rounded-4 shadow">
                     <div class="card-body mb-3">
                         <h5 class="h1 mt-5 text-center"> <i class="bi bi-door-open"></i> Hello!</h5>
-                        <p class="text-center lead mb-5">Sign in to your Postore account</p>
+                        <p class="text-center lead mb-5">Sign in to your Catposting account</p>
                         <?php if (isset($error)) : ?>
                             <div class="alert alert-danger rounded-4 slide" role="alert">
                                 <?= htmlspecialchars($error); ?>

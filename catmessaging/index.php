@@ -3,67 +3,76 @@
 <!DOCTYPE html>
 <html lang="es-US" data-bs-theme="dark">
   <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>¿La pagina no carga? ¿Página web lenta? | Franka Store Web Fix </title>
-    <meta name="description" content="Tu sitio web tiene errores, no se ve bien en dispositivos móviles y no aparece en Google. Obtén ayuda URGENTE!">
-    <meta name="keywords" content="mantenimiento web, errores web, carga lenta, dispositivos móviles, Franka Store, Google Search, SEO, error 404, error 500, wordpress error">
-    <meta name="author" content="frankastore">
-    <meta property="og:title" content="¿La pagina no carga? ¿Página web lenta? | Franka Store Web Fixer">
-    <meta property="og:description" content="Tu sitio web tiene errores, no se ve bien en dispositivos móviles y no aparece en Google. Obtén ayuda URGENTE!">
+    <meta name="robots" content="follow, index">
+    <title>CatMessaging | Bulk Messaging Notifications for Latin America</title>
+    <meta name="description" content="Send bulk messaging notifications and alerts to phone users in Latin America with CatMessaging. Utilize the WhatsApp Business API for efficient communication.">
+    <meta name="keywords" content="bulk messaging, notifications, alerts, whatsapp business api, latin america, catmessaging, franka store">
+    <meta name="author" content="catmessaging">
+    <meta property="og:title" content="CatMessaging | Bulk Messaging Notifications for Latin America">
+    <meta property="og:description" content="Send bulk messaging notifications and alerts to phone users in Latin America with CatMessaging. Utilize the WhatsApp Business API for efficient communication.">
     <meta property="og:image" content="url-to-your-social-media-thumbnail-image.jpg">
-    <meta property="og:url" content="https://franka.store">
+    <meta property="og:url" content="https://catmessaging.franka.store">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="¿La pagina no carga? ¿Página web lenta? | Franka Store Web Fixer">
-    <meta name="twitter:description" content="Tu sitio web tiene errores, no se ve bien en dispositivos móviles y no aparece en Google. Obtén ayuda URGENTE!">
+    <meta name="twitter:title" content="CatMessaging | Bulk Messaging Notifications for Latin America">
+    <meta name="twitter:description" content="Send bulk messaging notifications and alerts to phone users in Latin America with CatMessaging. Utilize the WhatsApp Business API for efficient communication.">
     <meta name="twitter:image" content="/apple-touch-icon.png">
     <link rel="icon" href="/apple-touch-icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="canonical" href="https://franka.store">
+    <link rel="canonical" href="https://catmessaging.franka.store">
     <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "CatMessaging",
+  "url": "https://catmessaging.franka.store",
+  "logo": "url-to-your-logo.png",
+  "description": "Send bulk messaging notifications and alerts to phone users in Latin America with CatMessaging. Utilize the WhatsApp Business API for efficient communication.",
+  "serviceType": "Bulk Messaging Service",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "78"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Latin America"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer service",
+    "email": "support@catmessaging.franka.store"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "29.99",
+    "priceCurrency": "USD",
+    "availability": "http://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "CatMessaging"
+    },
+    "hoursAvailable": [
       {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Franka Store",
-        "url": "https://franka.store",
-        "logo": "url-to-your-logo.png",
-        "description": "Tu sitio web tiene errores, no se ve bien en dispositivos móviles y no aparece en Google. Obtén ayuda URGENTE",
-        "serviceType": "Website maintenance and optimization",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "3",
-          "ratingCount": "112"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Latin America"
-        }
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer service",
-          "email": "fix@franka.store"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "9.99",
-          "priceCurrency": "USD",
-          "availability": "http://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "Franka Store"
-          },
-          "hoursAvailable": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "11:00",
-            "closes": "20:00"
-          }]
-        }
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
       }
-    </script>
+    ]
+  }
+}
+</script>
   </head>
   <style>
     :root {
@@ -167,10 +176,10 @@ opacity: 1;
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-3">
             <li data-bs-toggle="collapse" data-bs-target="#navbarNav" class="nav-item">
-              <a class="nav-link active" href="#" onclick="loadIframe('home.php', this);">
+              <a class="nav-link active" href="#" onclick="loadIframe('messaging.php', this);">
                 <span class="p-1 fw-light  text-light">
                   <i class="bi bi-grid"></i>
-                </span> Home </a>
+                </span> Cat Messaging </a>
             </li>
             <li data-bs-toggle="collapse" data-bs-target="#navbarNav" class="nav-item">
               <a class="nav-link" href="#" onclick="loadIframe('img-converter.php', this);">
@@ -195,6 +204,12 @@ opacity: 1;
                 <span class="p-1 fw-light  text-light">
                   <i class="bi bi-grid"></i>
                 </span> Proforma Template </a>
+            </li>
+            <li data-bs-toggle="collapse" data-bs-target="#navbarNav" class="nav-item">
+              <a class="nav-link" href="#" onclick="loadIframe('home.php', this);">
+                <span class="p-1 fw-light  text-light">
+                  <i class="bi bi-grid"></i>
+                </span> Home </a>
             </li>
           </ul>
         </div>

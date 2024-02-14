@@ -34,7 +34,7 @@ if (isset($_POST['logout'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Postore - Frankastore</title>
+    <title>CatPosting | Frankastore</title>
 
 </head>
 
@@ -108,7 +108,7 @@ if (isset($_POST['logout'])) {
 
             <div class="rounded-bottom-4 offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <i class="bi bi-asterisk"></i> Welcome, <?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Annon'; ?>!</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <i class="bi bi-cat"></i> Welcome, <?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Annon'; ?>!</h5>
 
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -129,7 +129,7 @@ if (isset($_POST['logout'])) {
 
     <!-- Modal for deleting a post confirmation -->
     <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="rounded-5 modal-content">
                 <div class="modal-header border-bottom-0">
                     <h5 class="modal-title" id="deleteConfirmationModalLabel"><i class="bi bi-info-circle"></i> Delete Confirmation</h5>
@@ -157,10 +157,10 @@ if (isset($_POST['logout'])) {
 
     <!-- Modal for Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="rounded-5 modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Sign in to Postore</h5>
+                    <h5 class="modal-title" id="loginModalLabel">Sign in to Catposting</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -189,7 +189,7 @@ if (isset($_POST['logout'])) {
 
     <!-- Modal for adding a new post -->
     <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="rounded-5 modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addPostModalLabel"><i class="bi bi-plus-lg"></i> Add New Post</h5>

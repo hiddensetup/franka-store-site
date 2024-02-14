@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Easy WEBP Converter</title>
+    <title>CatWEBP Converter | Frankastore</title>
 </head>
 
 <body class="fadeIn">
@@ -18,8 +18,8 @@
     <div class="container mt-5">
         <div id="welcome-message-container" class="container rounded-4">
             <div id="welcome-message" class="text-center p-4 rounded">
-                <h1 class="mb-4 display-4 pt-5 "><i class="bi bi-image"></i> WEBP Converter</h1>
-                <p class="lead col-sm-6 col-md-6 mx-auto">Unlock the full potential of your images with our state-of-the-art WEBP converter. This tool is designed to enhance your digital content.</p>
+                <h1 class="mb-4 display-4 pt-5 "><i class="bi bi-cat"></i> CatWEBP Converter</h1>
+                <p class="lead col-auto mx-auto">Unlock the full potential of your images with our state-of-the-art WEBP converter. This tool is designed to enhance your digital content.</p>
                 <div class="row justify-content-center my-4">
                     <div class="col-md-6">
                         <p class="bg-primary badge">Key Features</p>
@@ -27,7 +27,7 @@
                             <li class="list-group-item p-3">🌐 <b>Web-Friendly:</b> WEBP is the cool kid on the block, offering superior image quality with smaller file sizes for a smoother online experience.</li>
                             <li class="list-group-item p-3">⚡ <b>Speedy Conversions:</b> Drag, drop, and voilà! Watch your images transform in the blink of an eye.</li>
                             <li class="list-group-item p-3">🎨 <b>Image Excellence:</b> Whether you're a design maestro or just getting started, our converter ensures your visuals shine at their very best.</li>
-                            <li class="list-group-item p-3">🔄 <b>Effortless &amp; Efficient:</b> Batch convert with ease and enjoy hassle-free customization options for your images.</li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
             <input type="file" class="form-control visually-hidden" id="fileSelector" multiple>
         </div>
         <div class="dropup dropup-center me-2">
-            <button class="rotate-gear btn border-0 px-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="rotate-gear btn border-0 px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fs-4 bi bi-gear"></i>
             </button>
             <ul class="rounded-4 dropdown-menu dropdown-menu-end">

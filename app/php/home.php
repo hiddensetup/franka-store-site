@@ -21,12 +21,12 @@
 <body>
 
     <!-- 1. Hero Section -->
-    <section class="hero-section pt-5 gradienta">
+    <section class="bg-body-tertiary hero-section pt-5 rocket-bg">
 
         <div class="container-fluid mt-5 p-3">
             <div class="container">
                 <div class="row align-items-center text-center text-md-start">
-                    <div class="col-md-6 scale-in-center mb-5">
+                    <div class="col-md-6 scale-in-center mb-5 pe">
                         <h1 class="display-3 fw-bold" id="heroTitle"></h1>
                         <p class="lead" id="heroDescription"></p>
 
@@ -66,25 +66,28 @@
 
                     </div>
                     <div class="scale-in-center col-md-6">
-                        <div class="scalable-element card shadow-sm p-3 mb-5 rounded-4">
+                        <div class="scalable-element card shadow-sm p-3 mb-5 rounded-5">
                             <div class="card-body">
                                 <h2 class="card-title mb-4 text-center" id="formTitle"></h2>
                                 <form action="#" method="post" onsubmit="return generateWhatsAppMessage(contentJSON)">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label" id="nameLabel"></label>
-                                        <input type="text" class="form-control form-control-lg rounded-4" id="name" name="name" value="" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label" id="emailLabel"></label>
-                                        <input type="email" class="form-control form-control-lg rounded-4" id="email" name="email" value="" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="messageDropdown" class="form-label">Select Message</label>
-                                        <select class="form-select form-select-lg rounded-4" id="messageDropdown" name="messageDropdown" required>
+
+                                <div class="form-floating mb-3">
+    <input type="text" class="form-control rounded-4" id="name" name="name"  required>
+    <label for="name">Name</label>
+</div>
+<div class="form-floating mb-3">
+    <input type="email" class="form-control rounded-4" id="email" name="email"  required>
+    <label for="email">Email</label>
+</div>
+
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select rounded-4" id="messageDropdown" name="messageDropdown" required>
                                             <!-- Options will be dynamically generated here -->
                                         </select>
+                                        <label for="messageDropdown">Select Message</label>
+
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block w-100 rounded-4" id="submitButton"></button>
+                                    <button type="submit" class="padding-custom-btn btn btn-primary btn-lg btn-block w-100 rounded-4" id="submitButton"></button>
                                 </form>
                             </div>
                         </div>
@@ -147,7 +150,7 @@
                     <p class="lead" id="ctaDescription"></p>
                 </div>
                 <div class="col-12 col-md-4 text-center">
-                    <a href="#contact" class="btn btn-primary rounded-4 btn-lg px-4 py-2" id="ctaButton"></a>
+                    <a href="#contact" class="padding-custom-btn btn btn-primary rounded-4 btn-lg px-4 py-2" id="ctaButton"></a>
                 </div>
             </div>
         </div>
@@ -255,7 +258,7 @@
                         const cardHtml = `
                             <div class="col-md-6 scalable-element rounded-4">
                                 <div class="row g-0 rounded-4 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                                    <div class="col p-4 d-flex flex-column position-static">
+                                    <div class="col p-4 hover-color d-flex flex-column position-static">
                                         <strong class="d-inline-block mb-2 text-${item.color}-emphasis">${item.category}</strong>
                                         <h3 class="mb-2">${item.title}</h3>
                                         <p class="card-text mb-auto">${item.description}</p>
